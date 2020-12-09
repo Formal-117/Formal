@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Skillfair</title>
+  <meta charset="utf-8" />
+<link rel='stylesheet'
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+
+ <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700'rel='stylesheet' type='text/css'/>
+  <link href=
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+  <header class="container">
+    <div class="row">
+      <h1 class="col-sm-8">Skillfair</h1>
+      <nav class="col-sm-4">
+        <a href="#"><p>newest</p></a>
+        <a href="#"><p>catalogue</p></a>
+        <a href="#"><p>contact</p></a>
+		
+      </nav>
+    </div>
+  </header>
+  <section class="jumbotron">
+    <div class="container">
+      <div class="row text-center">
+        <h2>Homemade Goods</h2>
+        <h3>This Year's Best</h3>
+        <a class="btn btn-primary" href="#">See all</a>
+      </div>
+    </div>
+  </section>
+  <section class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <p>kitchen</p>
+        <a href="kitchen.html"><img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/kitchen.jpg"></a>
+      </div>
+      <div class="col-sm-6">
+        <p>woodwork</p>
+        <a href="woodwork.html"><img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/woodwork.jpg"></a>
+      </div>
+      <div class="col-sm-6">
+        <p>gifts</p>
+        <a href="gifts.html"><img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/gifts.jpg"></a>
+      </div>
+      <div class="col-sm-6">
+        <p>antiques</p>
+        <a href="antiques.html"><img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/antique.jpg"></a>
+      </div>
+    </div>
+    <div class="row text-center">
+      <a class="btn btn-secondary" href="#">View Complete Catalogue</a>
+    </div>
+  </section>
+  <footer class="container">
+    <div class="row">
+      <p class="col-sm-4">&copy; 2016 Skillfair</p>
+      <ul class="col-sm-8">
+        <li class="col-sm-1">
+          <a href="www.google.com"><img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/twitter.svg"></a>
+        </li>
+        <li class="col-sm-1">
+           <a href="#"><img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/facebook.svg"></a>
+        </li>
+        <li class="col-sm-1">
+           <a href="#"><img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/instagram.svg"></a>
+        </li>
+        <li class="col-sm-1">
+           <a href="#"><img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/medium.svg"></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+<style>
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+header {
+  padding: 20px 0;
+}
+
+header .row,
+footer .row {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: 700;
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header p {
+  padding: 0 20px;
+  margin: 0;
+}
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+  background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/jumbotron.jpg');
+  background-size: cover;
+  color: #ffffff;
+  height: 500px;
+  text-shadow: 0.50px 0.50px 0.50px #000000;
+}
+
+.jumbotron h2 {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+
+.jumbotron h3 {
+  margin: 0 0 20px;
+  color: #fff;
+}
+
+section .row img {
+  margin: 0 0 30px;
+  width: 100%;
+}
+
+.col-md-6 {
+  margin: 0 0 30px;
+}
+
+.btn.btn-primary {
+  border-radius: 2px;
+  border: 0px;
+  color: #fbd1d5;
+  text-shadow: none;
+  background-color: #ffffff;
+}
+
+.btn.btn-primary:hover {
+  color: #ffffff;
+  background-color: #fbd1d5;
+  transition: ease-in;
+}
+
+.btn-secondary {
+  background-color: #E8DFE0;
+  color: #ffffff;
+  margin: 0 0 30px;
+
+}
+
+footer {
+  font-size: 12px;
+  padding: 20px 0;
+}
+
+footer .col-sm-8 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li img {
+  width: 32px;
+  height: 32px;
+}
+.col-sm-4 a p { 
+	color:#333333;
+	text-decoration: none   !important;
+}
+
+.col-sm-4 a p:hover {
+	color: black;
+	font-weight: bold;
+	transition: 300ms;
+}
+
+.col-sm-6:hover {
+			    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+			    transform: translateY(-3px) scale(0.95);
+			 }
+
+</style>
+</html>

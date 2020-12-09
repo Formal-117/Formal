@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+		<title>Skillfair | Antiques</title>
+		<style type="text/css">
+			@import url('./base.css');
+			@import url('./basic-grid.css');
+			* {
+				margin: 0px;
+			}
+
+
+			section article div {
+				box-sizing: border-box;
+				border: 1px solid transparent;
+				padding: 2px;
+				width: 400px;
+				height: 280px;
+				color: white;
+				background-repeat: no-repeat;
+				background-size: cover !important;
+				margin-top: -140px;
+				padding-right: 0px;
+			}
+
+			section {
+				margin-top: 180px;
+			}
+
+			section article {
+				margin-right: 0;
+				margin-left: 1.7%;
+			}
+
+			article p {
+				margin-bottom: 10px;
+				margin-top: 10px;
+				padding-bottom: 50px;
+				position: relative;
+				left: 10px;
+				width: 300px;
+			}
+
+			article h3 {
+				margin-bottom: 2px;
+				position: relative;
+				left: 5px;
+				width: 300px;
+			}
+
+			div {
+				text-align: center;
+				background: black;
+				color: white;
+			}
+
+			header {
+				padding: 0px 0px;
+				width: 100%;
+				margin-top: -20px;
+			}
+			header .row,
+			footer .row {
+			  display: flex;
+			  align-items: center;
+			  background-color: white;
+			  color: black;
+			  margin-top: 15px;
+			}
+
+			header h1 {
+			  font-weight: 700;
+			  margin-left: 60px;
+			  padding-top: 10px;
+			  position: relative;
+			  right: 40px;
+			  text-align: left;
+			}
+
+			header nav {
+			  display: flex;
+			  justify-content: flex-end;
+			  width: 100%;
+			  margin-right: 1%;
+			  padding-right: 0px;
+			  position: relative;
+			  padding-top: 10px;
+			}
+
+			header p {
+			  padding: 0 10px;
+			  margin: 0;
+			}
+
+			.col-sm-4 a p{
+				color: #333333;
+			}
+
+			.col-sm-4 a p:hover {
+				color: black;
+				font-weight: bold;
+				transition: 300ms;
+			}
+
+			@media only screen and (max-width: 600px) { 
+			  body {
+			    background-color: lightblue;
+			  }
+
+			  header nav {
+			  	font-size: 10px;
+			  	padding-right: 0px !important;
+			  	right: 36%;
+			  	color: #333333 !important;
+			  	margin-left: 18px;
+			  	text-align: left;
+			  }
+
+			  header nav p {
+			  	padding: 10px 8px 10px 8px;
+			  }
+
+			  header h1 {
+			  	padding-right: 0px;
+			  	color: #333333;
+			  	margin-right: 80px !important;
+			  }
+			  section article {
+			  	width: 80%;
+			  	height: 60%;
+			  }
+
+			  section article div {
+			  	width: 350px;
+				height: 220px;
+			  }
+
+			}
+
+			.line {
+				width: 100%;
+				content: "";
+				background:  #bfbfbf;
+				position: absolute;
+				height: 0.5px;
+			}
+			.basic-grid{
+				display: grid;
+				gap: 10rem;
+				/*1fr is one column, the more you add the more space you get*/
+/* 1st method requires too much code*/
+				grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+			
+/*2 much cleaner code*/
+				grid-template-columns: repeat(12, 1fr);
+/* 3 better sizing, but overflows */
+				grid-template-columns: repeat(12, minmax(400px, 1fr));
+/*final step to make a responsive grid*/
+				grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+				grid-auto-rows: 280px;
+			}
+
+
+			@media only screen and (max-width: 600px) {  .basic-grid { grid-auto-rows: 200px; } }
+
+			
+			.pictures1{background: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/the-old-wooden-wheel-margaret-zabor.jpg");}
+			.pictures2{background: url("https://www.historicships.com/wp-content/uploads/2017/11/p_3_5_3_9_3539-Golden-Yacht-Ship-in-a-Bottle-Kit.jpg");}
+			.pictures3{background: url('https://images.unsplash.com/photo-1510100831744-b8d7fea7ca2e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');}
+			.pictures4{background: url('https://images.unsplash.com/photo-1536259425322-a7dfc1eac345?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');}
+			.pictures5{background: url('https://images.unsplash.com/photo-1559057620-e325fbdf26e0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8YW50aXF1ZXN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60');}
+			.pictures6{background: url(https://images.unsplash.com/photo-1516343951655-b04a58ad521a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80);
+				background-size: contain !important;
+			}
+			.pictures7{background: url(https://images.unsplash.com/photo-1519355673725-fe7ac3f995f2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);}
+			.pictures8{background: url(https://images.unsplash.com/photo-1547760918-ce888fdaa6f5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);}
+			.pictures9{background: url(https://images.unsplash.com/photo-1524668951403-d44b28200ce0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80);}
+			.pictures10{background: url();}
+
+				}
+		</style>		
+	</head>
+	<body>
+
+		<header class="container">
+		    <div class="row">
+		      <h1 class="col-sm-8" style="margin-right: 120px; position: relative;">Skillfair</h1>
+		      <nav class="col-sm-4">
+		        <a href="#"><p><span>newest</span></p></a>
+		        <a href="skillfair.html"><p><span>catalogue</span></p></a>
+		        <a href="#"><p><span>contact</span></p></a>
+				
+		      </nav>
+		    </div>
+		  </header>
+		
+		<div class="line"></div>
+		<h2 style="margin-left: 1%; text-decoration: underline; margin-top: 40px;"> Base Grid</h1>
+		<section class="basic-grid">
+			<article class="article">
+				<div class="pictures1"></div>
+				<h3>A vintage wheel</h3>
+				<p> This wheel dates back to the late 1800s.</p>
+			</article>
+			<article class="article">
+				<div class="pictures2" style="color: #0000;">1111111111111111111111111</div>
+				<h3>Old Ship in a Bottle</h3>
+				<p>Found near the sea</p>
+			</article>
+			<article class="article">
+				<div class="pictures3"></div>
+				<h3>An old music disk</h3>
+				<p>It's a classic...</p>
+			</article>
+			<article class="article">
+				<div class="pictures4"></div>
+				<h3>Vintage Comics</h3>
+				<p>Some might be very interesting or valuable</p>
+			</article>
+			<article class="article">
+				<div class="pictures5"></div>
+				<h3>Vintage Ford</h3>
+				<p>In working condition</p>
+			</article>
+			<article class="article">
+				<div class="pictures6"></div>
+				<h3>Two old pocket watches</h3>
+				<p>These date back to 1892 and they fetch a pretty penny</p>
+			</article>
+			<article class="article">
+				<div class="pictures7"></div>
+				<h3>Sed in imperdiet tellus.</h3>
+				<p>Nam fringilla sapien nisi, consectetur placerat leo feugiat sit amet.</p>
+			</article>
+			<article class="article">
+				<div class="pictures8"></div>
+				<h3> Curabitur eu dignissim ante. </h3>
+				<p> Cras feugiat libero lacus, ut luctus nibh imperdiet nec.</p>
+			</article>
+			<article class="article">
+				<div class="pictures9"></div>
+				<h3>Vestibulum nisl velit</h3>
+				<p> Praesent et nulla non lectus rutrum pretium vel nec massa. </p>
+			</article>
+			<!--<article class="article10">
+				<div class="pictures"></div>
+				<h3></h3>
+				<p></p>
+			</article>-->
+		</section>
+
+
+
+
+
+	</body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type= 'text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> 
+		<title>Kitchen</title>
+		<style type="text/css">
+			@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+
+			body {
+			    background: rgb(19, 19, 19);
+			    color: #fff;
+			    font-family: 'Noto Sans', sans-serif;
+			    margin: 0px;
+			}
+
+			.pictures {
+			    display: flex;
+			    flex-direction: column;
+			    justify-content: center;
+			    align-items: center;
+			    background: #353535;
+			    font-size: 3rem;
+			    color: #fff;
+			    margin: 6px;
+			    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+			    height: 100%;
+			    width: 100%;
+			    border-radius: 4px;
+			    transition: all 500ms;
+			    overflow: hidden;
+
+			    background-size: cover;
+			    background-position: center;
+			    background-repeat: no-repeat;
+			 }
+			  
+			.pictures:hover {
+			    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+			    transform: translateY(-3px) scale(1.1);
+			 }
+
+			/*Grid stuff */
+
+			 .basic-grid {
+			 	display: grid;
+			 	/*Gap is theSpacing between the children in the grid*/
+			 	gap: 1rem;
+
+			 	grid-template-columns: repeat(12, 1fr);
+
+			 	grid-template-columns: repeat(12, minmax(240px, 1fr));
+
+			 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+			 	grid-auto-rows: 240px;
+			}
+			
+			 @media screen and (min-width: 600px) {
+				 .article-tall {
+				 	/*Tells where the grid should start and end in number of rows*/
+				 	grid-row:  span 2 /auto;
+					 }
+
+				 .article-wide {
+				 	grid-column: span 2 / auto;
+				 	}			
+
+				 .article-wider {
+				 	grid-column: span 3 / auto;
+				 } 	
+			 }
+
+			 /* Modal stuff*/
+			#close {
+				position: absolute;
+				top: 15px;
+				right: 35px;
+				color:  #cccccc;
+				font-size: 40px;
+				font-weight: bold;
+				transition: 0.3s;
+				display: none;
+			}
+
+			#close:hover,
+			#close:focus {
+				color: #bbb;
+				text-decoration: none;
+				cursor: pointer;
+			}
+
+			.modal-content, #caption, #modal-img, #caption-2, #topic {
+				animation-name: zoom;
+				animation-duration: 0.6s;
+			}
+
+			@keyframes zoom {
+				from {transform: scale(0)} to { 
+					transform: scale(1)
+				}
+			}
+
+
+			 .modal {
+				display: none;
+				position: fixed;
+				z-index: 1;
+				padding-top: 100px;
+				left: 10%;
+				top: 4%;
+				width: 80%;
+				height: 80%;
+				overflow: auto;
+				background-color: rgb(242, 242, 242);
+				background-color: rgba(242, 242, 242, 0.95);
+				border-radius: 20px;
+				overflow: unset;
+			}
+
+			.modal-content {
+				margin: 0px auto 50px auto ;
+				display: block;
+				width: 80%;
+				height: 80%;
+				max-width: 700px;
+				object-fit: contain;
+				position: relative;
+				bottom: 50px;
+			}
+			#topic {
+				color: black;
+				margin: 15px 10px 0px 30px;
+				position: relative;
+				bottom: 75px;
+				width: 80%;
+				max-width: 700px;
+			}
+
+			#caption {
+				color: black;
+				margin: 15px 10px 0px 30px;
+				margin-top: 0px;
+				position: relative;
+				bottom: 60px;
+				width: 100%;
+				max-width: 90%;
+			}
+
+			/*Header stuff */
+			header {
+				background-color: white;
+				display: inline-block;
+				width: 100%;
+				color: black;
+				height: 88px;
+
+
+			}
+
+			header nav {
+				position: relative;
+				bottom: 65px;
+			}
+
+			header nav a {
+				color: #333333;
+				list-style: none;
+				float: right; /*this can be used to order them in line or*/
+				display: inline-table;/*can be used as well*/
+				margin-right:40px;
+				text-decoration: none;
+				font-size: 14px;
+			}
+
+			header nav a:hover {
+				color: black;
+				text-decoration: underline;
+				transition: 300ms;
+			}
+
+			header h1 {
+				font-weight: bold;
+				font-family: 'Roboto', sans-serif;
+				font-size: 36px;
+				margin-left: 60px;
+				position: relative;
+				color: #333333 !important;
+				left: 35px;
+				top: 10px;
+				text-align: left;
+				width: 50%;
+			}
+
+			@media only screen and (max-width: 600px) { 
+			  body {
+			    background-color: lightblue;
+			  }
+
+			  header nav a{
+			  	font-size: 10px;
+			  	padding-right: 0px !important;
+			  	right: 36%;
+			  	margin: 0 10px 0 0;
+			  	color: #333333 !important;
+			  	text-align: left;
+			  }
+
+			  header nav p {
+			  	padding: 10px 8px 10px 8px;
+			  }
+
+			  header h1 {
+			  	padding-right: 0px;
+			  	color: #333333;
+			  	margin-left: 0px;
+			  	position: relative !important;
+			  	right: 50px !important;
+			  }
+			  section article {
+			  	width: 80%;
+			  	height: 60%;
+			  }
+
+			  section article div {
+			  	width: 350px;
+				height: 220px;
+			  }
+
+			  .modal p, .modal h3{ 
+			  	margin: 5px !important;
+			  	width: 95% !important;
+			  	bottom: 10px;
+			  	text-align: center;
+			  }
+			  .pictures {
+			  	margin: 0px;
+			  }
+
+			  #img1 {
+			  	margin-bottom: 10px;
+			  }
+			}
+		</style>
+	</head>
+	<body>
+		
+		<header class="container">
+		    <div class="row">
+		      <h1 class="col-sm-8" style="margin-right: 120px; position: relative;">Skillfair</h1>
+		      <nav class="col-sm-4">
+		        <a href="#"><p><span>contact</span></p></a>
+		        <a href="skillfair.html"><p><span>catalogue</span></p></a>
+		        <a href="#"><p><span>newest</span></p></a>
+				
+		      </nav>
+		    </div>
+		 </header>
+
+
+
+		<h2 style="text-decoration: none; text-align: center; padding-bottom: 20px;"> <!--Basic Grid--> Kitchen</h2>
+		<secction class="basic-grid">
+			<article class="article-tall">
+				<div class='pictures' id = 'pic-1' style="background-image: url(https://images.unsplash.com/photo-1529042410759-befb1204b468?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60);">1</div>
+			</article>
+			<article class="article">
+				<div class='pictures picture-tall' id ='pic-2'
+				style = "background-image:url(https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60);">2</div>
+			</article>
+			<article class="article-wider">
+				<div class='pictures picture-wide' id ='pic-3'
+				style = "background-image:url(https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60);">3</div>
+			</article>
+			<article class="article-wide">
+				<div class='pictures' id ='pic-4'
+				style = "background-image:url(https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60);">4</div>
+			</article>
+			<article class="article-tall">
+				<div class='pictures' id ='pic-5'
+				style = "background-image:url(https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60);">5</div>
+			</article>
+			<article class="article">
+				<div class='pictures' id ='pic-6' style="background-image: url(https://images.unsplash.com/photo-1466637574441-749b8f19452f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60);"  >6</div>
+			</article>
+			<article class="article">
+				<div class='pictures' id ='pic-7'style="background-image: url(https://images.unsplash.com/photo-1506354666786-959d6d497f1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60);">7</div>
+			</article>
+			<article class="article">
+				<div class='pictures' id ='pic-8'
+				style = "background-image:url(https://images.unsplash.com/photo-1497888329096-51c27beff665?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60);">8</div>
+			</article>
+		</secction>
+
+		<div id = "mymodal" class="modal">
+
+			<span id="close">&times;</span>
+
+			<img class="modal-content" id="img1">
+
+			<h3 id="topic"></h3>
+
+			<p id="caption"></p>
+		</div>
+
+
+		<script type="text/javascript">
+			var img = document.querySelectorAll(".basic-grid article");
+			var i;
+			var divName;
+			var close = document.getElementById("close");
+			var modal = document.getElementById("mymodal");
+			var topic = document.getElementById("topic");
+			var caption = document.getElementById("caption");
+
+			for (i = 0; i < img.length; i++) {
+				//Gets the divId of the picture clicked
+				img[i].addEventListener('click', function(divId) {
+                divName = divId.target.id;
+                job(divName);}, false);
+			}
+
+			function job(clickedId){ 
+			    console.log(clickedId);
+				//Gets the background image and sets it to the modal
+    			var bg = $("#" + clickedId).css('background-image');
+   				bg = bg.replace('url(','').replace(')','').replace(/\"/gi, "");
+   				var modalImg = document.getElementById("img1");
+   				modalImg.src = bg; 
+   				console.log(modalImg.src);
+   				modal.style.display = 'block';
+   				close.style.display = 'block';
+   				addTopic(clickedId);
+			}
+
+
+			//Where all the modal magic happens
+			function addTopic(modalTopic){
+				if (modalTopic == "pic-1"){
+					topic.innerHTML = "Swedish Meatballs";
+					caption.innerHTML = "These meatballs are made with carefully selected meat, which is then cooked with the best of ingredients found in Sweden.";
+				}
+				else if(modalTopic == "pic-2") {
+					topic.innerHTML="French Bread";
+					caption.innerHTML = "It's a pleasantly sweet breakfast";				
+				}
+				else if(modalTopic == "pic-3"){
+					topic.innerHTML="La salade de vegetarian";
+					caption.innerHTML = "In hac habitasse platea dictumst.";
+				}
+				else if(modalTopic == "pic-4"){
+					topic.innerHTML="Freshly Cooked Salmon with Gravy";
+					caption.innerHTML = "Maecenas egestas eros eget mollis sodales. ";					
+				}
+				else if(modalTopic == "pic-5"){
+					topic.innerHTML="Boiled Egg with Freshly Baked Wheat Toast";
+					caption.innerHTML = "Cras vitae laoreet nisi, in dapibus nunc.";					
+				}
+				else if(modalTopic == "pic-6"){
+					topic.innerHTML="Cooking Class with Mrs. McGrady";
+					caption.innerHTML = "Aliquam non nibh vitae risus laoreet hendrerit.";					
+				}
+				else if(modalTopic == "pic-7"){
+					topic.innerHTML="Pizza la Italia";
+					caption.innerHTML = "A pizza made with the finest and most delicate ingredients brought straight from the local farm.";					
+				}
+				else if(modalTopic == "pic-8"){
+					topic.innerHTML="Mixed Fruit Pudding";
+					caption.innerHTML = "Sweet, creamy pudding that melts in your mouth and the fruits top the experience off with a rainbow of flavors.";					
+				}
+				else {
+					topic.innerHTML = "Not Defined";
+					caption.innerHTML = "Not Defined";
+				}
+
+			}
+
+			close.onclick = function () {
+				mymodal.style.display = 'none';
+				close.style.display = 'none'; 
+			}
+
+			//The long and less challenging way would be just to make seperate on click functions and simmilar modal values in those functions
+		</script>
+	</body>
+</html>
