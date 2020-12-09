@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<title>FORMAL | Coming Soon</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('https://images.unsplash.com/photo-1606655165679-cddb22373c18?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.logo {
+  font-family: 'Spartan', sans-serif !important;
+  font-size: 20px;
+  float:left;
+  margin: 20px;
+  font-weight: 400px;
+  }
+ .logo a {
+	text-decoration: none;
+ }
+ 
+ @media only screen and (max-width: 500px){
+	.w3-jumbo {
+		font-size: 28px !important;
+		margin: 0px;
+		display:inline;
+	}
+ }
+ @media only screen and (max-width: 400px){
+	.w3-jumbo {
+		font-size: 22px !important;
+		margin: 0px;
+		display:inline;
+	}
+	.w3-large { 
+		font-size: 11.5px;
+	}
+
+ }
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="logo">
+    <a href='index.html'>FORMAL</a>
+  </div>
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+	<h2 id = "end"></h2>
+    <p class="w3-large w3-center"><span id = "days">35</span><span id ="hours"></span><span id = "mins"></span><span id ="sec"></span> left</p>
+  </div>
+  <div class="w3-display-bottomleft w3-padding-large">
+    <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">FORMAL</a> <span>2020<span>
+  </div>
+</div>
+
+<script>
+	// The data/time we want to countdown to
+    var countDownDate = new Date("Jan 4, 2021 1:30:00").getTime();
+	console.log(countDownDate);
+	
+    // Run myfunc every second
+    var myfunc = setInterval(function() {
+		var timeNow = new Date().getTime();
+		//console.log(timeNow);
+		var timeLeft = countDownDate - timeNow;
+	// Calculating the days, hours, minutes and seconds left
+	//1000 milliseconds times 60 secs times 60 mins times 24 hrs = 1 day 
+    var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+// Result is output to the specific element
+    document.getElementById("days").innerHTML = days + "d ";
+    document.getElementById("hours").innerHTML = hours + "h " ;
+    document.getElementById("mins").innerHTML = minutes + "m " ;
+    document.getElementById("sec").innerHTML = seconds + "s " ;
+// Display the message when countdown is over
+    if (timeLeft < 0) {
+        clearInterval(myfunc);
+        document.getElementById("days").innerHTML = "";
+        document.getElementById("hours").innerHTML = ""; 
+        document.getElementById("mins").innerHTML = "";
+        document.getElementById("sec").innerHTML = "";
+        document.getElementById("end").innerHTML = "TIME UP!!";
+    }
+	})
+</script>
+
+</body>
+</html>
