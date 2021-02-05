@@ -3469,6 +3469,15 @@ nav a:hover {
 	.fa-home {
 		margin-top: 11.5px;
 	}
+	.snake:nth-child(odd) {
+		border-right: 0.2px solid lightgrey; 
+		padding-right: 30px;
+	}	
+
+	.snake:nth-child(even) {
+		border-left: 0.2px solid lightgrey; 
+		padding-left: 30px;
+	}		
 	
 }
 
