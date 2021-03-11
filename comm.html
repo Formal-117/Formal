@@ -26,15 +26,19 @@ body, html {height: 100%}
  .logo a {
 	text-decoration: none;
  }
- 	
+
+ #end {
+  text-align: center;
+ }
+ 
  @media only screen and (max-width: 916px){
   .w3-jumbo {
     font-size: 31px !important;
     margin: 0px;
-    display:inline; 
+    display:inline;
   }
  }
- 	
+ 
  @media only screen and (max-width: 500px){
 	.w3-jumbo {
 		font-size: 28px !important;
@@ -53,6 +57,7 @@ body, html {height: 100%}
 	}
 
  }
+
 </style>
 <body>
 
@@ -64,7 +69,7 @@ body, html {height: 100%}
     <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
     <hr class="w3-border-grey" style="margin:auto;width:40%">
 	<h2 id = "end"></h2>
-    <p class="w3-large w3-center"><span id = "days">35</span><span id ="hours"></span><span id = "mins"></span><span id ="sec"></span> left</p>
+    <p class="w3-large w3-center" id = "timer"><span id = "days">35</span><span id ="hours"></span><span id = "mins"></span><span id ="sec"></span> left</p>
   </div>
   <div class="w3-display-bottomleft w3-padding-large">
     <a href="index.html">FORMAL</a> <span>2021<span>
@@ -73,7 +78,7 @@ body, html {height: 100%}
 
 <script>
 	// The data/time we want to countdown to
-    var countDownDate = new Date("March 10, 2021 1:30:00").getTime();
+    var countDownDate = new Date("April 28, 2021 1:30:00").getTime();
 	console.log(countDownDate);
 	
     // Run myfunc every second
@@ -99,6 +104,7 @@ body, html {height: 100%}
         document.getElementById("hours").innerHTML = ""; 
         document.getElementById("mins").innerHTML = "";
         document.getElementById("sec").innerHTML = "";
+        document.getElementById("timer").innerHTML = "";
         document.getElementById("end").innerHTML = "TIME UP!!";
     }
 	})
