@@ -13,6 +13,16 @@ close.onclick = function() {
 	close.style.display = 'none';
 }
 
+//Function to smoothscroll down a page
+function scroller(name){
+	var x = "Total Width: " + screen.width + "px";
+	var offset = $(name).offset(); // Contains .top and .left
+	offset.top -= 120;
+	$('html, body').animate({
+    scrollTop: offset.top,
+	}, 1000);
+}
+
 //Package Display
 
 var bronze_svg = document.getElementById("svg-bronze"); 
@@ -34,7 +44,8 @@ gold_title.onclick = function () {
 	bronzeTable.style.display = 'none';
 	silverTable.style.display = "none";
 	goldTable.style.display = 'block';
-	goldTable.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+	scroller(goldTable);
+	//goldTable.scrollIntoView({ block: 'start',  behavior: 'smooth' });
 	pay.style.display = "block";
 
 }
@@ -44,7 +55,8 @@ gold_titleDuo.onclick = function () {
 	bronzeTable.style.display = 'none';
 	silverTable.style.display = "none";
 	goldTable.style.display = 'block';
-	goldTable.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+	scroller(goldTable);
+	goldTable.scrollIntoView({ block: 'start',  behavior: 'smooth' });
 	pay.style.display = "block";
 
 }
@@ -54,7 +66,8 @@ silver_title.onclick = function () {
 	goldTable.style.display = 'none';
 	bronzeTable.style.display = 'none';
 	silverTable.style.display = "block";
-	silverTable.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+	scroller(silverTable);
+	//silverTable.scrollIntoView({ block: 'start',  behavior: 'smooth' });
 	pay.style.display = "block";
 }
 
@@ -63,7 +76,8 @@ silver_titleDuo.onclick = function () {
 	goldTable.style.display = 'none';
 	bronzeTable.style.display = 'none';
 	silverTable.style.display = "block";
-	silverTable.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+	scroller(silverTable);
+	//silverTable.scrollIntoView({ block: 'start',  behavior: 'smooth' });
 	pay.style.display = "block";	
 }
 
@@ -72,7 +86,8 @@ bronze_title.onclick = function () {
 	goldTable.style.display = 'none';
 	silverTable.style.display = 'none';
 	bronzeTable.style.display = "block";
-	bronzeTable.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+	scroller(bronzeTable);
+	//bronzeTable.scrollIntoView({ block: 'start',  behavior: 'smooth' });
 	pay.style.display = "block";
 }
 
@@ -81,7 +96,8 @@ bronze_titleDuo.onclick = function () {
 	goldTable.style.display = 'none';
 	silverTable.style.display = 'none';
 	bronzeTable.style.display = "block";
-	bronzeTable.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+	scroller(bronzeTable);
+	//bronzeTable.scrollIntoView({ block: 'start',  behavior: 'smooth' });
 	pay.style.display = "block";
 }
 
