@@ -46,6 +46,100 @@
 	font-size: 14px;
 }
 
+/* Portfolio Jumbotron Animation*/
+.mini-jumbo {
+	background-color: #202A2C; /*Original Background color*/
+	background: rgba(22, 156, 60, 0.9);
+	background: linear-gradient(to bottom right, #00cc99 0%, #202a2c 105%), -webkit-linear-gradient(top left, rgba(22, 156, 60, 0.9), rgba(14, 13, 14, 1.0));
+	background: linear-gradient(to bottom right, #00cc99 0%, #202a2c 105%), -moz-linear-gradient(top left, rgba(22, 156, 60, 0.9), rgba(14, 13, 14, 1.0));
+	background: linear-gradient(to bottom right, #00cc99 0%, #202a2c 105%), linear-gradient(to bottom right, rgba(22, 156, 60, 0.9), rgba(14, 13, 14, 1.0));
+	margin: 70px 0px 0px 0px;
+	padding: 0px;
+	display: flex;
+	justify-content: center;
+	height: 550px;
+	width: 100%;
+}
+
+#port-logo {
+	width: 300px;
+	height: 150px;
+	display: block;
+	margin: auto;
+	animation: fill 0.5s ease forwards 3.8s;
+}
+
+#port-logo path:nth-child(1){
+	stroke-dasharray: 281.1px; /*Animation part*/
+	stroke-dashoffset: 281.1px;
+	animation: line-anim 2s ease forwards;
+}
+
+#port-logo path:nth-child(2){
+	stroke-dasharray: 299.2px; /*Animation part*/
+	stroke-dashoffset: 299.2px;
+	animation: line-anim 2s ease forwards 0.3s;
+}
+
+#port-logo path:nth-child(3){
+	stroke-dasharray: 190.8px; /*Animation part*/
+	stroke-dashoffset: 190.8px;
+	animation: line-anim 2s ease forwards 0.6s;
+}
+
+#port-logo path:nth-child(4){
+	stroke-dasharray: 196.9px; /*Animation part*/
+	stroke-dashoffset: 196.9px;
+	animation: line-anim 2s ease forwards 0.9s;
+}
+
+#port-logo path:nth-child(5){
+	stroke-dasharray: 197.9px; /*Animation part*/
+	stroke-dashoffset: 197.9px;
+	animation: line-anim 2s ease forwards 1.2s;
+}
+
+#port-logo path:nth-child(6){
+	stroke-dasharray: 271.9px; /*Animation part*/
+	stroke-dashoffset: 271.9px;
+	animation: line-anim 2s ease forwards 1.5s;
+}
+
+#port-logo path:nth-child(7){
+	stroke-dasharray: 149.8px; /*Animation part*/
+	stroke-dashoffset: 149.8px;
+	animation: line-anim 2s ease forwards 1.8s;
+}
+
+#port-logo path:nth-child(8){
+	stroke-dasharray: 149.8px; /*Animation part*/
+	stroke-dashoffset: 149.8px;
+	animation: line-anim 2s ease forwards 2.1s;
+}
+
+#port-logo path:nth-child(9){
+	stroke-dasharray: 271.8px; /*Animation part*/
+	stroke-dashoffset: 271.8px;
+	animation: line-anim 2s ease forwards 2.4s;
+}
+
+@keyframes line-anim {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes fill{
+	from {
+		fill:transparent;
+	}
+	to {
+		fill: white;
+	}
+}
+
+
+
 @media screen and (max-width: 290px) {
 	#preview {
 				font-size: 12px;
@@ -3257,8 +3351,22 @@ nav {
 				.poptrox-popup .nav-previous:before {
 					margin-top: -1em;
 				}
+		/*Portfolio Jumbotron*/
+			#port-logo {
+				width: 250px;
+				height: 125px;
+			}
 
-	}
+			.mini-jumbo {
+				background-color: #202A2C;
+				margin: 70px 0px 0px 0px;
+				padding: 0px;
+				display: flex;
+				justify-content: center;
+				height: 590px;
+				width: 100%;
+			}
+		}
 
 /* XSmall */
 
@@ -3283,6 +3391,7 @@ nav {
 				margin-left: 0;
 				padding-left: 0;
 			}
+
 
 	}
 /*Logo*/
@@ -3372,13 +3481,14 @@ nav a:hover {
 	  margin: 6px 0;
 	  z-index: 2;
 	}*/
-	svg {
+	#menu svg {
 		display: block;
 		fill: #009933;
-	}
+	} /*Lol*/
+	
 	svg:hover {
-		fill: #49bf9d;
-		transition: 300ms;
+		/*! fill: #49bf9d; */
+		/*! transition: 300ms; */
 	}
  }
 
@@ -3469,6 +3579,7 @@ nav a:hover {
 	.fa-home {
 		margin-top: 11.5px;
 	}
+	
 	.snake:nth-child(odd) {
 		border-right: 0.2px solid lightgrey; 
 		padding-right: 30px;
@@ -3478,7 +3589,6 @@ nav a:hover {
 		border-left: 0.2px solid lightgrey; 
 		padding-left: 30px;
 	}		
-	
 }
 
 /*Section Custom*/ 
@@ -3647,6 +3757,7 @@ nav a:hover {
 		        .year {
 		        	padding-left: 2px !important;
 		        }
+			
 
 }
 
