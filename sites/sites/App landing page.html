@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type= 'text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
+		<title>Appt | Basic Landing Page</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+      }
+      .jumbotron {
+        margin: 58px 0 0 0;
+        background-image: url("https://images.unsplash.com/photo-1591533273685-8e1f37212aee?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1047&q=80");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .greys {
+        color:   #f2f2f2;
+        text-shadow: 2px 2px 3.1px darkgrey;
+      }
+
+      .blunt {
+        background-color:  #4dc3ff !important;
+        border-color:  #4dc3ff;
+      }
+
+      .footer {
+        background-color: pink;
+        width: 100%;
+        padding: 60px 0 60px 0;
+      }
+
+      .pad {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      a img {
+        width: 15%;
+        margin: 20px;
+      }
+
+      .pad {
+        width: 100%;
+      }
+
+      .card {
+        position: relative;
+      }
+
+      .card:hover {
+        z-index: 1;
+      }
+      @media only screen and (max-width: 2000px) {
+        #mobile {
+          display: none;
+        }
+      }
+
+      @media only screen and (max-width: 1198px) {
+        #mobile {
+          display: block;
+        }
+      }
+
+      #botnet {
+        margin-bottom: 90px !important;
+      }
+
+    </style>
+	</head>
+	<body data-spy="scroll" data-target="#myNav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-2" id=myNav>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Appt</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#info">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#app" tabindex="-1" aria-disabled="true">Download the App</a>
+            </li>
+          </ul>
+            <form class="row row-cols-lg-auto g-3 align-items-right" style="margin-right: 10px">
+                <fieldset class = "col-12">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                </fieldset>
+                <fieldset class = "col-12">
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </fieldset>
+              <button type="submit" class="btn" style="background:  #ffe066;">Log in</button>
+            </form>
+        </div>
+      </div>
+    </nav>
+
+    <div data-bs-spy="scroll" data-bs-target="#myNav" data-bs-offset="0" tabindex="70">
+    <!--Jumbo-->
+    <div class="jumbotron img-fluid text-center pt-5" id="home">
+      <h1 class="display-4 pt-5 greys mt-5" id = "win">Imagine...</h1>
+      <p class="lead text-light greys mx-1">A quick way to make apps. The possibilities are endless.</p>
+      <hr class="my-5 text-light">
+      <p class="greys pb-3 mx-1">You should know that your dreams - can indeed - become a reality, if you try hard enough. </p>
+      <a class="btn btn-lg mb-5" style="background-color:  #ffe066; color: grey;" href="#" role="button" id="botnet">Learn more</a>
+    </div>
+    <!--Information Section-->
+    <section class="container" id="info">
+      <div class="text-center m-4 pt-5" >
+        <h2> Why should you use Appt?</h2>
+        <p>Simple, efficient, and versatile are just some of the reasons to use Appt. The cards below will tell you more.</p>
+        <span id="mobile">Tap on the cards ^_^</span>
+      </div>
+      <div class="row d-flex justify-content-center mt-5">
+        <div class="col-sm-3">
+            <div class="card mx-auto" style="width: 18rem;" id="un">
+                <img src="https://images.unsplash.com/photo-1483375801503-374c5f660610?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="Plane">
+                <div class="card-body">
+                  <h5 class="card-title"><i class="fa fa-fighter-jet" aria-hidden="true"></i> Versatile</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin, elit et facilisis mattis, turpis tellus placerat felis, ut aliquam lectus nisl et massa. Mauris vel tellus feugiat, eleifend velit vitae, fermentum elit.</p>
+                  <a href="#" class="btn btn-primary blunt">Read more</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card mx-auto" style="width: 18rem;" id="deux">
+              <img src="https://images.unsplash.com/photo-1472457897821-70d3819a0e24?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80" class="card-img-top" alt="Lego">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fa fa-th" aria-hidden="true"></i> Simple</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin, elit et facilisis mattis, turpis tellus placerat felis, ut aliquam lectus nisl et massa. Mauris vel tellus feugiat, eleifend velit vitae, fermentum elit.</p>
+                <a href="#" class="btn btn-primary blunt">Read more</a>
+              </div>             
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card mx-auto" style="width: 18rem;" id="trois">
+              <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="Machines">
+              <div class="card-body">
+                <h5 class="card-title"><i class="fa fa-cogs" aria-hidden="true"></i> Efficient</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin, elit et facilisis mattis, turpis tellus placerat felis, ut aliquam lectus nisl et massa. Mauris vel tellus feugiat, eleifend velit vitae, fermentum elit.</p>
+                <a href="#" class="btn btn-primary blunt">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>  
+    </section>                          
+  <!--Get the App--> 
+  <section class ="footer mt-5" id="app">
+      <div class="row pad pt-5">
+        <h2 class="text-center mt-5"> Download the appt!</h2>
+        <p class="text-center" style="font-size: 20px">Try it now.</p>     
+        <p class="text-center mt-5">
+            <a href="#"><img src="https://cdn.supercell.com/supercell.com/210203100232/all/themes/supercell/img/18/footer_appstore.png"></a>
+             
+            <a href="#"><img src="https://cdn.supercell.com/supercell.com/210203100232/all/themes/supercell/img/18/footer_googleplay.png"></a>
+             
+            <a href="#"><img src="https://cdn.supercell.com/supercell.com/210203100232/all/themes/supercell/img/18/btn_amazon_appstore.png"></a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    
+  </section>
+
+
+
+  <!-- Javascript Also scrollSpy doesn't work in bootstrap 5 as of yet -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+        <script src="https://use.fontawesome.com/941991173b.js"></script>
+
+        <script type="text/javascript">
+          var one = $('#un');
+          var two = $('#deux');
+          var three = $('#trois');
+            one.click(function () {
+              one.css('z-index', 2);
+              two.css('z-index', 1);
+              three.css('z-index', 0);
+            });
+            $("#deux").click(function () {
+              one.css('z-index', 0);
+              $('#deux').css('z-index', 10);
+              three.css('z-index', 0);
+            });     
+            three.click(function () {
+              one.css('z-index', 0);
+              two.css('z-index', 1);
+              three.css('z-index', 2);            
+            });
+        </script>
+   
+	</body>
+</html>
+
+<!--<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <title>Boot</title>
+
+     <style>
+
+     body {
+         
+         position: relative;
+         
+     }
+     
+     #one {
+         
+         margin-top:70px;
+         
+     }
+
+ </style>
+  </head>
+ <body data-spy="scroll" data-target="#navbar-example2" data-offset="70">
+<nav id="navbar-example2" class="navbar navbar-light bg-light fixed-top" >
+        <a class="navbar-brand" href="#">Navbar</a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#fat">@fat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#mdo">@mdo</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#one">one</a>
+              <a class="dropdown-item" href="#two">two</a>
+              <div role="separator" class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#three">three</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+        <h4 id="fat">@fat</h4>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dignissim libero nec turpis luctus finibus. Nullam a orci dui. Aliquam elementum ullamcorper placerat. Fusce sagittis arcu sem, in auctor ligula tincidunt ut. Maecenas pretium sem arcu, at ultrices purus consequat maximus. Etiam feugiat lorem urna, sit amet eleifend dui feugiat tempor. Integer cursus velit sit amet quam viverra, rhoncus sagittis purus scelerisque. Etiam quis rutrum mi, id placerat lorem. Mauris congue mauris quis orci imperdiet, sit amet tempus velit vestibulum. Cras rhoncus at massa in imperdiet. Vivamus dignissim ipsum nulla, at volutpat tortor iaculis sed. Quisque auctor ipsum sit amet neque fermentum, a vulputate nunc pellentesque. Cras facilisis finibus elit in congue. Morbi tincidunt eleifend nulla. Pellentesque bibendum ante libero, a aliquet lorem pretium sit amet. Nam non magna lacinia lorem pharetra commodo vitae a velit. Sed vitae diam laoreet, dictum arcu non, egestas sapien. Nunc at eros orci. Morbi erat leo, porta sed sodales sed, pharetra a enim. Mauris et nulla suscipit, interdum metus ac, convallis nisi. Praesent vitae lectus eu ex malesuada congue a in erat. Duis interdum placerat diam. Etiam quis tincidunt sem. Nam ultrices rhoncus metus et porta. Quisque sit amet dolor at ipsum imperdiet consequat ac ac quam. Quisque nec congue nibh. Integer fringilla libero odio, eu gravida dolor viverra vitae. Suspendisse consequat purus et mollis tristique. Nam faucibus est id justo placerat commodo. Nullam nibh sapien, congue quis tincidunt quis, molestie a velit. Nunc ac ligula erat. Nam in ultrices mi. Nullam et sem venenatis sapien viverra suscipit. </p>
+        <h4 id="mdo">@mdo</h4>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dignissim libero nec turpis luctus finibus. Nullam a orci dui. Aliquam elementum ullamcorper placerat. Fusce sagittis arcu sem, in auctor ligula tincidunt ut. Maecenas pretium sem arcu, at ultrices purus consequat maximus. Etiam feugiat lorem urna, sit amet eleifend dui feugiat tempor. Integer cursus velit sit amet quam viverra, rhoncus sagittis purus scelerisque. Etiam quis rutrum mi, id placerat lorem. Mauris congue mauris quis orci imperdiet, sit amet tempus velit vestibulum. Cras rhoncus at massa in imperdiet. Vivamus dignissim ipsum nulla, at volutpat tortor iaculis sed. Quisque auctor ipsum sit amet neque fermentum, a vulputate nunc pellentesque. Cras facilisis finibus elit in congue. Morbi tincidunt eleifend nulla. Pellentesque bibendum ante libero, a aliquet lorem pretium sit amet. Nam non magna lacinia lorem pharetra commodo vitae a velit. Sed vitae diam laoreet, dictum arcu non, egestas sapien. Nunc at eros orci. Morbi erat leo, porta sed sodales sed, pharetra a enim. Mauris et nulla suscipit, interdum metus ac, convallis nisi. Praesent vitae lectus eu ex malesuada congue a in erat. Duis interdum placerat diam. Etiam quis tincidunt sem. Nam ultrices rhoncus metus et porta. Quisque sit amet dolor at ipsum imperdiet consequat ac ac quam. Quisque nec congue nibh. Integer fringilla libero odio, eu gravida dolor viverra vitae. Suspendisse consequat purus et mollis tristique. Nam faucibus est id justo placerat commodo. Nullam nibh sapien, congue quis tincidunt quis, molestie a velit. Nunc ac ligula erat. Nam in ultrices mi. Nullam et sem venenatis sapien viverra suscipit. </p>
+        <h4 id="one">one</h4>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dignissim libero nec turpis luctus finibus. Nullam a orci dui. Aliquam elementum ullamcorper placerat. Fusce sagittis arcu sem, in auctor ligula tincidunt ut. Maecenas pretium sem arcu, at ultrices purus consequat maximus. Etiam feugiat lorem urna, sit amet eleifend dui feugiat tempor. Integer cursus velit sit amet quam viverra, rhoncus sagittis purus scelerisque. Etiam quis rutrum mi, id placerat lorem. Mauris congue mauris quis orci imperdiet, sit amet tempus velit vestibulum. Cras rhoncus at massa in imperdiet. Vivamus dignissim ipsum nulla, at volutpat tortor iaculis sed. Quisque auctor ipsum sit amet neque fermentum, a vulputate nunc pellentesque. Cras facilisis finibus elit in congue. Morbi tincidunt eleifend nulla. Pellentesque bibendum ante libero, a aliquet lorem pretium sit amet. Nam non magna lacinia lorem pharetra commodo vitae a velit. Sed vitae diam laoreet, dictum arcu non, egestas sapien. Nunc at eros orci. Morbi erat leo, porta sed sodales sed, pharetra a enim. Mauris et nulla suscipit, interdum metus ac, convallis nisi. Praesent vitae lectus eu ex malesuada congue a in erat. Duis interdum placerat diam. Etiam quis tincidunt sem. Nam ultrices rhoncus metus et porta. Quisque sit amet dolor at ipsum imperdiet consequat ac ac quam. Quisque nec congue nibh. Integer fringilla libero odio, eu gravida dolor viverra vitae. Suspendisse consequat purus et mollis tristique. Nam faucibus est id justo placerat commodo. Nullam nibh sapien, congue quis tincidunt quis, molestie a velit. Nunc ac ligula erat. Nam in ultrices mi. Nullam et sem venenatis sapien viverra suscipit. </p>
+        <h4 id="two">two</h4>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dignissim libero nec turpis luctus finibus. Nullam a orci dui. Aliquam elementum ullamcorper placerat. Fusce sagittis arcu sem, in auctor ligula tincidunt ut. Maecenas pretium sem arcu, at ultrices purus consequat maximus. Etiam feugiat lorem urna, sit amet eleifend dui feugiat tempor. Integer cursus velit sit amet quam viverra, rhoncus sagittis purus scelerisque. Etiam quis rutrum mi, id placerat lorem. Mauris congue mauris quis orci imperdiet, sit amet tempus velit vestibulum. Cras rhoncus at massa in imperdiet. Vivamus dignissim ipsum nulla, at volutpat tortor iaculis sed. Quisque auctor ipsum sit amet neque fermentum, a vulputate nunc pellentesque. Cras facilisis finibus elit in congue. Morbi tincidunt eleifend nulla. Pellentesque bibendum ante libero, a aliquet lorem pretium sit amet. Nam non magna lacinia lorem pharetra commodo vitae a velit. Sed vitae diam laoreet, dictum arcu non, egestas sapien. Nunc at eros orci. Morbi erat leo, porta sed sodales sed, pharetra a enim. Mauris et nulla suscipit, interdum metus ac, convallis nisi. Praesent vitae lectus eu ex malesuada congue a in erat. Duis interdum placerat diam. Etiam quis tincidunt sem. Nam ultrices rhoncus metus et porta. Quisque sit amet dolor at ipsum imperdiet consequat ac ac quam. Quisque nec congue nibh. Integer fringilla libero odio, eu gravida dolor viverra vitae. Suspendisse consequat purus et mollis tristique. Nam faucibus est id justo placerat commodo. Nullam nibh sapien, congue quis tincidunt quis, molestie a velit. Nunc ac ligula erat. Nam in ultrices mi. Nullam et sem venenatis sapien viverra suscipit. </p>
+        <h4 id="three">three</h4>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dignissim libero nec turpis luctus finibus. Nullam a orci dui. Aliquam elementum ullamcorper placerat. Fusce sagittis arcu sem, in auctor ligula tincidunt ut. Maecenas pretium sem arcu, at ultrices purus consequat maximus. Etiam feugiat lorem urna, sit amet eleifend dui feugiat tempor. Integer cursus velit sit amet quam viverra, rhoncus sagittis purus scelerisque. Etiam quis rutrum mi, id placerat lorem. Mauris congue mauris quis orci imperdiet, sit amet tempus velit vestibulum. Cras rhoncus at massa in imperdiet. Vivamus dignissim ipsum nulla, at volutpat tortor iaculis sed. Quisque auctor ipsum sit amet neque fermentum, a vulputate nunc pellentesque. Cras facilisis finibus elit in congue. Morbi tincidunt eleifend nulla. Pellentesque bibendum ante libero, a aliquet lorem pretium sit amet. Nam non magna lacinia lorem pharetra commodo vitae a velit. Sed vitae diam laoreet, dictum arcu non, egestas sapien. Nunc at eros orci. Morbi erat leo, porta sed sodales sed, pharetra a enim. Mauris et nulla suscipit, interdum metus ac, convallis nisi. Praesent vitae lectus eu ex malesuada congue a in erat. Duis interdum placerat diam. Etiam quis tincidunt sem. Nam ultrices rhoncus metus et porta. Quisque sit amet dolor at ipsum imperdiet consequat ac ac quam. Quisque nec congue nibh. Integer fringilla libero odio, eu gravida dolor viverra vitae. Suspendisse consequat purus et mollis tristique. Nam faucibus est id justo placerat commodo. Nullam nibh sapien, congue quis tincidunt quis, molestie a velit. Nunc ac ligula erat. Nam in ultrices mi. Nullam et sem venenatis sapien viverra suscipit. </p>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  </body>
+</html>-->

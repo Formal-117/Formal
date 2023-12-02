@@ -191,6 +191,25 @@ input, select, textarea {
 			}
 
 		}
+		/*Changes made*/
+
+		@media screen and (max-width:  503px){
+			.menu li {
+				display: none;
+			}
+			.fas-bars{
+				text-align: right !important;
+				z-index: 2;
+				width: 20px !important;
+				height: 20px !important; 
+			}
+		}
+
+		@media screen and (min-width:  504px){
+			.burger-menu{
+				display: none;
+			}
+		}
 
 	a {
 		-moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;

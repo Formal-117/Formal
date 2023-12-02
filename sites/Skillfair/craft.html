@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Skillfair | Woodwork</title>
+		<style type="text/css">
+			@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+
+			body {
+			    background: rgb(19, 19, 19);
+			    color: #fff;
+			    font-family: 'Noto Sans', sans-serif;
+			}
+
+			.card {
+			    display: flex;
+			    flex-direction: column;
+			    justify-content: center;
+			    align-items: center;
+			    background: #353535;
+			    font-size: 3rem;
+			    color: #fff;
+			    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+			    height: 100%;
+			    width: 100%;
+			    border-radius: 4px;
+			    transition: all 500ms;
+			    overflow: hidden;
+
+			    background-size: cover;
+			    background-position: center;
+			    background-repeat: no-repeat;
+			 }
+			  
+			.card:hover {
+			    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+			    transform: translateY(-3px) scale(1.1);
+			 }
+
+			 .basic-grid{
+			 	/*Displays this in a grid and gap between the cards is the second line after display*/
+			 	display: grid;
+			 	gap:  1rem;
+			 	/*1fr is 100% of the available space whereas 1fr 1fr is 50% of the available space
+			 	grid-template-columns: 1fr 1fr 1fr;*/
+
+			 	/*Better way to the method above is using below for fractional units of space*/
+			 	grid-template-columns: repeat(12, 1fr);
+
+
+			 	/*Repeating with auto fit will expand it's children to take up additional space, and auto-fill will leave space for new grids that have a fixed width*/
+			 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+			 }
+
+			.photo-grid{
+			 	display: grid;
+			 	gap:  1rem;
+
+			 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+			 	grid-template-rows: repeat(auto-fit, minmax(240px, 1fr));
+
+			 	/*Fixes a child to certain height*/
+			 	grid-auto-rows: 240px;
+
+			}
+			/*Only applies if the screen width is greater than 600px in the viewport*/
+			@media screen and (min-width:  600px){
+				.card-tall {
+				 	/*Start wherever span2 rows and end wherevevr*/
+				 	grid-row: span 2 / auto;
+				}
+
+				.card-wide{
+				 	grid-column: span 2 / auto;
+				}
+			}
+
+			/*Add media queries at the appropriate points to fix the blank spaces*/ 
+
+
+			.animated-grid {
+				height: 85vh;
+        margin-bottom: 200px;
+
+				display: grid;
+				gap: 1rem;
+
+				/*Explicit Grid:  Lets you created a layout by giving names to the different areas in the grid*/
+
+				  grid-template-areas: 
+            'a  b  c  d'
+            'l  A A e'
+            'k  A A f'
+            'j  i  h  g';
+
+				/*Grid container has a fixed height*/
+				/*Each individual row takes up 25% of the space*/
+				grid-template-rows: repeat(4, 25%);
+				/*Columns first and last child are 240px*/
+				grid-template-columns: 240px auto auto 240px;
+			}
+      .card {
+        background-color: rgb(36, 243, 147);
+      }
+				/*Now, to place the children in the appropriate grid area we can use classes or nth-child property*/
+
+			.card:nth-child(1){
+				grid-area: a;
+			}
+			.card:nth-child(2){
+				grid-area: b;
+			}
+			.card:nth-child(3){
+				grid-area: c;
+			}
+			.card:nth-child(4){
+				grid-area: d;
+			}
+			.card:nth-child(5){
+				grid-area: l;
+			}
+			.card:nth-child(6){
+				grid-area: e;
+			}
+			.card:nth-child(7){
+				grid-area: k;
+			}
+			.card:nth-child(8){
+				grid-area: f;
+			}
+			.card:nth-child(9){
+				grid-area: j;
+			}
+			.card:nth-child(10){
+				grid-area: i;
+			}
+			.card:nth-child(11){
+				grid-area: h;
+			}
+			.card:nth-child(12){
+				grid-area: g;
+			}
+			.card:last-child{
+				grid-area: A;
+			}
+
+
+
+		</style>
+	</head>
+	<body>
+		<!--<section class="basic-grid">
+			<div class="card">1</div>
+			<div class="card">2</div>
+			<div class="card">3</div>
+			<div class="card">4</div>
+			<div class="card">5</div>
+			<div class="card">6</div>
+			<div class="card">7</div>
+			<div class="card">8</div>
+			<div class="card">9</div>
+			<div class="card">10</div>
+			<div class="card">11</div>
+			<div class="card">12</div>
+		</section>-->
+		<!--<h1>Photo Grid</h1>
+		<div class="photo-grid">
+			<div class="card card-tall" style="background-image: url();">1</div>
+			<div class="card" style="background-image: url();">2</div>
+			<div class="card" style="background-image: url();">3</div>
+			<div class="card card-tall" style="background-image: url();">4</div>
+			<div class="card card-tall" style="background-image: url();">5</div>
+			<div class="card card-wide" style="background-image: url();">6</div>
+			<div class="card card-wide" style="background-image: url();">7</div>
+			<div class="card" style="background-image: url();">8</div>
+			<div class="card card-wide card-tall" style="background-image: url();">9</div>
+			<div class="card" style="background-image: url();">10</div>
+			<div class="card" style="background-image: url();">11</div>
+			<div class="card" style="background-image: url();">12</div>
+			</div>-->
+			<h1>Animated Grid</h1>
+			<section class="animated-grid">
+				<div class="card">a</div>
+				<div class="card">b</div>
+				<div class="card">c</div>
+				<div class="card">d</div>
+				<div class="card">e</div>
+				<div class="card">f</div>
+				<div class="card">g</div>
+				<div class="card">h</div>
+				<div class="card">i</div>
+				<div class="card">j</div>
+				<div class="card">k</div>
+				<div class="card">l</div>
+				<div class="card">main</div>
+			</section>
+	</body>
+</html>
